@@ -9,12 +9,45 @@ document.getElementById('currentDay').innerHTML ='Today is ' + today
 
 //section - timeblocks
 
-let hourSlot = document.getElementsByClassName('hour')
 let timeRow = document.getElementsByClassName('row')
-
 let hour = parseInt(moment().format('h'))
+let saveButton = document.querySelector('saveBtn')
 
+// console.log(hour)
+// console.log(timeRow[5].children[0].textContent)
 
+// if (hour > hourValueNumeric) {
+//   timeRow[0].children[2].classList.add('past')
+// }
+
+for (let i = 0; i < 9; i++) {
+  let hourValue = timeRow[i].children[0].textContent
+  let hourValueNumeric = parseInt(hourValue)
+
+  if (hour > hourValueNumeric) {
+    timeRow[i].children[2].classList.add('past')
+    console.log('past')
+  }
+  else if (hour === hourValueNumeric) {
+    timeRow[i].children[2].classList.add('present')
+    console.log('present')
+  }
+  else if (hour < hourValueNumeric) {
+    timeRow[i].children[2].classList.add('future')
+    console.log('future')
+  }
+  else {
+    timeRow[i].children[2].classList.add('broken')
+    console.log('broken')
+  }
+}
+
+saveButton.addEventListener('click', function(event) {
+  for (let i = 0; i < 9; i++) {
+    let taskText = document.querySelector('#task' + i).value
+    localStorage.setItem('tasks', taskText)
+  }
+})
 
 // for loop attempt at row creation
 

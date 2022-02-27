@@ -23,6 +23,7 @@ textarea{
 
 .description{
   white-space: pre-wrap;
+  width: 70%;
 }
 
 .time-block{
@@ -55,6 +56,11 @@ textarea{
 
 .future {
   background-color: #77dd77;
+  color: white;
+}
+
+.broken {
+  background-color: purple;
   color: white;
 }
 
