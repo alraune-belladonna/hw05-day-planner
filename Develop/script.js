@@ -8,3 +8,8 @@ document.getElementById('currentDay').innerHTML ='Today is ' + today
 
 //section - timeblocks
 
+let timeValue
+
+if (condition) {
+  
+}
