@@ -8,7 +8,9 @@ document.getElementById('currentDay').innerHTML ='Today is ' + today
 
 //section - timeblocks
 
-let timeValue
+const 
+
+let timeValue = document.getElementsByClassName('hour')
 
 if (condition) {
   
