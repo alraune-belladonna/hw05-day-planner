@@ -11,7 +11,6 @@ document.getElementById('currentDay').innerHTML ='Today is ' + today
 
 let timeRow = document.getElementsByClassName('row')
 let hour = parseInt(moment().format('h'))
-let saveButton = document.querySelector('saveBtn')
 
 // console.log(hour)
 // console.log(timeRow[5].children[0].textContent)
@@ -42,12 +41,7 @@ for (let i = 0; i < 9; i++) {
   }
 }
 
-saveButton.addEventListener('click', function(event) {
-  for (let i = 0; i < 9; i++) {
-    let taskText = document.querySelector('#task' + i).value
-    localStorage.setItem('tasks', taskText)
-  }
-})
+
 
 // for loop attempt at row creation
 
