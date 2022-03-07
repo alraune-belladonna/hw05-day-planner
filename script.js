@@ -10,7 +10,8 @@ document.getElementById('currentDay').innerHTML ='Today is ' + today
 //section - timeblocks
 
 let timeRow = document.getElementsByClassName('row')
-let hour = parseInt(moment().format('HH'))
+//let hour = parseInt(moment().format('HH'))
+let hour = 11
 
 //console.log(hour)
 
